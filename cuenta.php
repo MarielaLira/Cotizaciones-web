@@ -4,6 +4,43 @@
 ?>
 
 <?php
+global $current_user;
+global $user_ID;
+get_currentuserinfo();
+$role = implode(',', $current_user->roles);
+$role .= '';
+if (is_user_logged_in() == false){
+   $login_page  = home_url( '/' );
+   wp_safe_redirect($login_page);
+}
+
+get_header();
+get_template_part( 'menu' );
+
+
+$name = $current_user->data->user_login;
+$post_id = get_page_by_title( $name.' '.$user_ID, OBJECT, 'postcuentas' )->ID;  
+if($post_id == null){
+  $new_post = array(
+  'post_title' => $name.' '.$user_ID,
+  'post_status' => 'publish',
+  'post_date' => date('Y-m-d H:i:s'),
+  'post_author' => $user_ID,
+  'post_type' => 'postcuentas'
+  );
+  $post_id = wp_insert_post($new_post);
+}
+
+$src=get_post_field('logoPost', $post_id);
+$tel=get_post_field('telPost', $post_id);
+$empresa=get_post_field('empresaPost', $post_id);
+$dir=get_post_field('dirPost', $post_id);
+$mail=get_post_field('mailPost', $post_id);
+
+
+
+?>
+<?php
 
 get_header();
 get_template_part( 'menu' );  
