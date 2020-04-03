@@ -39,13 +39,6 @@ $mail=get_post_field('mailPost', $post_id);
 
 
 
-?>
-<?php
-
-get_header();
-get_template_part( 'menu' );  
-
-
 
 
 ?>
