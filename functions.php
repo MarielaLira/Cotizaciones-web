@@ -168,7 +168,158 @@ function custom_post_type() {
     register_post_type( 'postcuentas', $args );
 
 
-    
+    ///////////////////////////////////////////////coti post 
+    // Set UI labels for Custom Post Type
+    $labels = array(
+        'name'                => _x( 'cotis', 'Post Type General Name', 'cot' ),
+        'singular_name'       => _x( 'coti', 'Post Type Singular Name', 'cot' ),
+        'menu_name'           => __( 'cotis', 'cot' ),
+        'parent_item_colon'   => __( 'Parent coti', 'cot' ),
+        'all_items'           => __( 'All cotis', 'cot' ),
+        'view_item'           => __( 'View coti', 'cot' ),
+        'add_new_item'        => __( 'Add New coti', 'cot' ),
+        'add_new'             => __( 'Add New', 'cot' ),
+        'edit_item'           => __( 'Edit coti', 'cot' ),
+        'update_item'         => __( 'Update coti', 'cot' ),
+        'search_items'        => __( 'Search coti', 'cot' ),
+        'not_found'           => __( 'Not Found', 'cot' ),
+        'not_found_in_trash'  => __( 'Not found in Trash', 'cot' ),
+    );
+     
+    // Set other options for Custom Post Type
+     
+    $args = array(
+        'label'               => __( 'cotis', 'cot' ),
+        'description'         => __( 'cot cotis', 'cot' ),
+        'labels'              => $labels,
+        // Features this CPT supports in Post Editor
+        'supports'            => array( 'title', 'editor', 'thumbnail'),
+        // You can associate this CPT with a taxonomy or custom taxonomy. 
+        'taxonomies'          => array( 'genres', 'category' ),
+        /* A hierarchical CPT is like Pages and can have
+        * Parent and child items. A non-hierarchical CPT
+        * is like Posts.
+        */ 
+        'hierarchical'        => false,
+        'public'              => false,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'can_export'          => true,
+        'has_archive'         => false,
+        'exclude_from_search' => true,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'post',
+    );
+     
+    // Registering your Custom Post Type
+    register_post_type( 'postcotis', $args );
+
+
+
+
+    ///////////////////////////////////////////////producto post 
+    // Set UI labels for Custom Post Type
+    $labels = array(
+        'name'                => _x( 'productos', 'Post Type General Name', 'cot' ),
+        'singular_name'       => _x( 'producto', 'Post Type Singular Name', 'cot' ),
+        'menu_name'           => __( 'productos', 'cot' ),
+        'parent_item_colon'   => __( 'Parent producto', 'cot' ),
+        'all_items'           => __( 'All productos', 'cot' ),
+        'view_item'           => __( 'View producto', 'cot' ),
+        'add_new_item'        => __( 'Add New producto', 'cot' ),
+        'add_new'             => __( 'Add New', 'cot' ),
+        'edit_item'           => __( 'Edit producto', 'cot' ),
+        'update_item'         => __( 'Update producto', 'cot' ),
+        'search_items'        => __( 'Search producto', 'cot' ),
+        'not_found'           => __( 'Not Found', 'cot' ),
+        'not_found_in_trash'  => __( 'Not found in Trash', 'cot' ),
+    );
+     
+    // Set other options for Custom Post Type
+     
+    $args = array(
+        'label'               => __( 'productos', 'cot' ),
+        'description'         => __( 'cot productos', 'cot' ),
+        'labels'              => $labels,
+        // Features this CPT supports in Post Editor
+        'supports'            => array( 'title', 'editor', 'thumbnail'),
+        // You can associate this CPT with a taxonomy or custom taxonomy. 
+        'taxonomies'          => array( 'genres', 'category' ),
+        /* A hierarchical CPT is like Pages and can have
+        * Parent and child items. A non-hierarchical CPT
+        * is like Posts.
+        */ 
+        'hierarchical'        => false,
+        'public'              => false,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'can_export'          => true,
+        'has_archive'         => false,
+        'exclude_from_search' => true,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'post',
+    );
+     
+    // Registering your Custom Post Type
+    register_post_type( 'postproductos', $args );
+
+
+
+
+    ///////////////////////////////////////////////cliente post 
+    // Set UI labels for Custom Post Type
+    $labels = array(
+        'name'                => _x( 'clientes', 'Post Type General Name', 'cot' ),
+        'singular_name'       => _x( 'cliente', 'Post Type Singular Name', 'cot' ),
+        'menu_name'           => __( 'clientes', 'cot' ),
+        'parent_item_colon'   => __( 'Parent cliente', 'cot' ),
+        'all_items'           => __( 'All clientes', 'cot' ),
+        'view_item'           => __( 'View cliente', 'cot' ),
+        'add_new_item'        => __( 'Add New cliente', 'cot' ),
+        'add_new'             => __( 'Add New', 'cot' ),
+        'edit_item'           => __( 'Edit cliente', 'cot' ),
+        'update_item'         => __( 'Update cliente', 'cot' ),
+        'search_items'        => __( 'Search cliente', 'cot' ),
+        'not_found'           => __( 'Not Found', 'cot' ),
+        'not_found_in_trash'  => __( 'Not found in Trash', 'cot' ),
+    );
+     
+    // Set other options for Custom Post Type
+     
+    $args = array(
+        'label'               => __( 'clientes', 'cot' ),
+        'description'         => __( 'cot clientes', 'cot' ),
+        'labels'              => $labels,
+        // Features this CPT supports in Post Editor
+        'supports'            => array( 'title', 'editor', 'thumbnail'),
+        // You can associate this CPT with a taxonomy or custom taxonomy. 
+        'taxonomies'          => array( 'genres', 'category' ),
+        /* A hierarchical CPT is like Pages and can have
+        * Parent and child items. A non-hierarchical CPT
+        * is like Posts.
+        */ 
+        'hierarchical'        => false,
+        'public'              => false,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'can_export'          => true,
+        'has_archive'         => false,
+        'exclude_from_search' => true,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'post',
+    );
+     
+    // Registering your Custom Post Type
+    register_post_type( 'postclientes', $args );
 
 
 
@@ -229,7 +380,164 @@ function m_param_meta_box_add() {
        'high'                        // $priority
     );
    
-    
+    add_meta_box(
+       'logoPost',          // $id
+       'logo',                  // $title
+       'logoCall',     // $callback
+       'postcotis',                 // $page
+       'normal',                     // $context
+       'high'                        // $priority
+    );
+    add_meta_box(
+       'empresaPost',          // $id
+       'empresa',                  // $title
+       'empresaCall',     // $callback
+       'postcotis',                 // $page
+       'normal',                     // $context
+       'high'                        // $priority
+    );
+    add_meta_box(
+       'dirPost',          // $id
+       'dir',                  // $title
+       'dirCall',     // $callback
+       'postcotis',                 // $page
+       'normal',                     // $context
+       'high'                        // $priority
+    );
+    add_meta_box(
+       'mailPost',          // $id
+       'mail',                  // $title
+       'mailCall',     // $callback
+       'postcotis',                 // $page
+       'normal',                     // $context
+       'high'                        // $priority
+    );
+    add_meta_box(
+       'telPost',          // $id
+       'tel',                  // $title
+       'telCall',     // $callback
+       'postcotis',                 // $page
+       'normal',                     // $context
+       'high'                        // $priority
+    );
+    add_meta_box(
+       'clienteEmpPost',          // $id
+       'clienteEmp',                  // $title
+       'clienteEmpCall',     // $callback
+       'postcotis',                 // $page
+       'normal',                     // $context
+       'high'                        // $priority
+    );
+    add_meta_box(
+       'clienteNomPost',          // $id
+       'clienteNom',                  // $title
+       'clienteNomCall',     // $callback
+       'postcotis',                 // $page
+       'normal',                     // $context
+       'high'                        // $priority
+    );
+    add_meta_box(
+       'fecha1Post',          // $id
+       'fecha1',                  // $title
+       'fecha1Call',     // $callback
+       'postcotis',                 // $page
+       'normal',                     // $context
+       'high'                        // $priority
+    );
+    add_meta_box(
+       'fecha2Post',          // $id
+       'fecha2',                  // $title
+       'fecha2Call',     // $callback
+       'postcotis',                 // $page
+       'normal',                     // $context
+       'high'                        // $priority
+    );
+    add_meta_box(
+       'descPost',          // $id
+       'desc',                  // $title
+       'descCall',     // $callback
+       'postcotis',                 // $page
+       'normal',                     // $context
+       'high'                        // $priority
+    );
+    add_meta_box(
+       'notasPost',          // $id
+       'notas',                  // $title
+       'notasCall',     // $callback
+       'postcotis',                 // $page
+       'normal',                     // $context
+       'high'                        // $priority
+    );
+    add_meta_box(
+       'ivaPost',          // $id
+       'iva',                  // $title
+       'ivaCall',     // $callback
+       'postcotis',                 // $page
+       'normal',                     // $context
+       'high'                        // $priority
+    );
+    add_meta_box(
+       'monedaPost',          // $id
+       'moneda',                  // $title
+       'monedaCall',     // $callback
+       'postcotis',                 // $page
+       'normal',                     // $context
+       'high'                        // $priority
+    );
+    add_meta_box(
+       'itemPost',          // $id
+       'item',                  // $title
+       'itemCall',     // $callback
+       'postcotis',                 // $page
+       'normal',                     // $context
+       'high'                        // $priority
+    );
+    add_meta_box(
+       'statusPost',          // $id
+       'status',                  // $title
+       'statusCall',     // $callback
+       'postcotis',                 // $page
+       'normal',                     // $context
+       'high'                        // $priority
+    );
+
+
+    add_meta_box(
+       'descPost',          // $id
+       'desc',                  // $title
+       'descCall',     // $callback
+       'postproductos',                 // $page
+       'normal',                     // $context
+       'high'                        // $priority
+    );
+    add_meta_box(
+       'precioPost',          // $id
+       'precio',                  // $title
+       'precioCall',     // $callback
+       'postproductos',                 // $page
+       'normal',                     // $context
+       'high'                        // $priority
+    );
+
+
+
+    add_meta_box(
+       'clienteEmpPost',          // $id
+       'clienteEmp',                  // $title
+       'clienteEmpCall',     // $callback
+       'postclientes',                 // $page
+       'normal',                     // $context
+       'high'                        // $priority
+    );
+    add_meta_box(
+       'clienteNomPost',          // $id
+       'clienteNom',                  // $title
+       'clienteNomCall',     // $callback
+       'postclientes',                 // $page
+       'normal',                     // $context
+       'high'                        // $priority
+    );
+
 
 }
 
